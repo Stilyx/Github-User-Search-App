@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github User Search App</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="light">
+    <header>
+      <nav class="logo">devfinder</nav>
+      <nav class="theme">DARK</nav>
+    </header>
+    <main class="container">
+      <!-- Form  -->
+      <form action="/">
+        <img src="images/input-icons/search-ico.png" alt="Search Icon" />
+        <input
+          class="writeUser"
+          type="text"
+          name="gitUser"
+          id="gitUserText"
+          placeholder="Search GitHub username…"
+          autocomplete="off"
+        />
+        <small class="error-message">No results</small>
+        <button class="searchUser">Search</button>
+      </form>
+      <section class="user-content">
+        <img src="" alt="UserIcon" class="user-image" />
+        <section class="user-info">
+          <section class="userNameAndAccountCreated">
+            <h1 class="userName"></h1>
+            <p class="userSign"></p>
+            <p class="accountCreatedTime"></p>
+          </section>
+          <section class="userBio">
+            <p class="bio"></p>
+          </section>
+          <section class="userinteractions">
+            <div class="interaction">
+              <p class="whoInteraction">Repos</p>
+              <p class="numberOfInteraction repostNumbers"></p>
+            </div>
+            <div class="interaction">
+              <p class="whoInteraction">Followers</p>
+              <p class="numberOfInteraction followersNumber"></p>
+            </div>
+            <div class="interaction">
+              <p class="whoInteraction">Following</p>
+              <p class="numberOfInteraction followingNumber"></p>
+            </div>
+          </section>
+          <section class="networks">
+            <p class="networkItem location"></p>
+            <p class="networkItem twitter"></p>
+            <p class="networkItem link"></p>
+            <p class="networkItem company"></p>
+          </section>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="js/main.js"></script>
+    <script nomodule src="js/menu.js"></script>
+  </body>
+</html>

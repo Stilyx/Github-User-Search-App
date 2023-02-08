@@ -1,0 +1,379 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* Reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Themes */
+
+.light {
+  --themeTextcolor: #222731;
+  --theme-ico: url(../images/page-theme/moon.svg);
+  --themeColor: invert(0%) sepia(2%) saturate(6%) hue-rotate(339deg) brightness(96%) contrast(103%);
+  --iconsColor: invert(70%) sepia(50%) saturate(20%) hue-rotate(178deg) brightness(10%)
+    contrast(15%);
+  --background: #f2f2f2;
+  --content-background: #ffff;
+  --info-background: #f6f8ff;
+  --text-color: #222731;
+  --bioNetWorksText: #4b6a9b;
+}
+
+.dark {
+  --themeTextcolor: #90a4d4;
+  --theme-ico: url(../images/page-theme/sun.svg);
+  --themeColor: invert(66%) sepia(29%) saturate(407%) hue-rotate(184deg) brightness(94%)
+    contrast(90%);
+  --iconsColor: invert(100%) sepia(5%) saturate(0%) hue-rotate(39deg) brightness(200%)
+    contrast(107%);
+  --background: #141d2f;
+  --content-background: #1e2a47;
+  --info-background: #141d2f;
+  --text-color: #fff;
+  --bioNetWorksText: #ffff;
+}
+
+/* Body Centralization */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background: var(--background);
+  transition: 0.3s;
+  width: 780px;
+  margin: 0 auto;
+}
+
+/* Body Scroll Customize */
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--bioNetWorksText);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--themeTextcolor);
+  border-radius: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 35px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--themeTextcolor);
+  cursor: pointer;
+}
+
+.theme::after {
+  content: var(--theme-ico);
+  filter: var(--themeColor);
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.container {
+  height: auto;
+  width: 100%;
+}
+
+form {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+form img {
+  position: absolute;
+  top: 23px;
+  left: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 22px;
+  font-size: 18px;
+  padding-left: 60px;
+  border-radius: 15px;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--content-background);
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+form input:focus {
+  border: none;
+  outline: none;
+}
+
+form .searchUser {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  color: white;
+  background-color: #0079ff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+form .searchUser:hover {
+  background-color: #60abff;
+}
+
+.error-message {
+  display: none;
+  position: absolute;
+  color: #f74646;
+  font-size: 15px;
+  font-weight: 700;
+  right: 130px;
+  top: 23px;
+}
+
+.user-content {
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  background-color: var(--content-background);
+  border-radius: 15px;
+  padding: 40px;
+  gap: 37px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  margin-bottom: 20px;
+}
+
+.user-content img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.userNameAndAccountCreated {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  width: 100%;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.userName {
+  font-size: 26px;
+  font-weight: 700;
+  align-self: center;
+}
+
+.accountCreatedTime {
+  color: var(--text-color);
+  opacity: 75%;
+}
+
+.userSign {
+  grid-column: 1;
+  grid-row: 2;
+  color: #0079ff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.bio {
+  color: var(--bioNetWorksText);
+  opacity: 75%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.userinteractions {
+  display: flex;
+  align-items: center;
+  width: 480px;
+  height: 85px;
+  background-color: var(--info-background);
+  justify-content: space-between;
+  padding: 0px 32px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.interaction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.whoInteraction {
+  color: var(--bioNetWorksText);
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 75%;
+}
+
+.numberOfInteraction {
+  font-size: 22px;
+  color: var(--text-color);
+  font-weight: 700;
+}
+.networks {
+  width: 100px;
+  height: auto;
+}
+
+.networks {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 15px;
+  color: var(--bioNetWorksText);
+  width: 500px;
+}
+
+.networkItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  font-size: 15px;
+}
+
+.link {
+  width: auto;
+}
+
+.location::before {
+  content: url(../images/info-icons/location.svg);
+  filter: var(--iconsColor);
+  margin-right: 10px;
+}
+.twitter::before {
+  content: url(../images/info-icons/twitter-icon.svg);
+  filter: var(--iconsColor);
+  margin-right: 10px;
+}
+.link::before {
+  content: url(../images/info-icons/github-link.svg);
+  filter: var(--iconsColor);
+  margin-right: 10px;
+}
+
+.company::before {
+  content: url(../images/info-icons/company-icon.svg);
+  filter: var(--iconsColor);
+  margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 370px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-size: 26px;
+  }
+
+  form img {
+    top: 18px;
+  }
+
+  form input {
+    font-size: 11px;
+  }
+
+  form .searchUser {
+    position: absolute;
+    top: 5px;
+  }
+  .container {
+    width: 100%;
+  }
+
+  .user-content {
+    display: none;
+    flex-direction: column;
+  }
+
+  .userNameAndAccountCreated {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 80px;
+    height: 100px;
+    width: 200px;
+  }
+
+  .userName {
+    font-size: 16px;
+    align-self: flex-start;
+  }
+
+  .userSign {
+    font-size: 13px;
+  }
+
+  .user-content img {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+  }
+
+  .userinteractions {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .interaction {
+    align-items: center;
+  }
+  .whoInteraction {
+    font-size: 11px;
+  }
+
+  .numberOfInteraction {
+    font-size: 16px;
+  }
+  .networks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .networkItem {
+    font-size: 13px;
+  }
+}
