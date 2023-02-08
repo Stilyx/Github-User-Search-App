@@ -325,6 +325,16 @@ form .searchUser:hover {
     display: none;
     flex-direction: column;
   }
+  .user-content img {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+  }
+
+  .error-message {
+    top: 65px;
+    left: 30px;
+  }
 
   .userNameAndAccountCreated {
     display: flex;
@@ -342,12 +352,6 @@ form .searchUser:hover {
 
   .userSign {
     font-size: 13px;
-  }
-
-  .user-content img {
-    position: absolute;
-    width: 70px;
-    height: 70px;
   }
 
   .userinteractions {
