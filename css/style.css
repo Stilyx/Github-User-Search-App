@@ -53,6 +53,7 @@ body {
   transition: 0.3s;
   width: 780px;
   margin: 0 auto;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Body Scroll Customize */
@@ -100,6 +101,10 @@ header {
   margin-left: 10px;
   width: 20px;
   height: 20px;
+}
+
+.theme:hover {
+  opacity: 75%;
 }
 
 .container {
@@ -272,6 +277,14 @@ form .searchUser:hover {
 
 .link {
   width: auto;
+}
+
+.networkItem a {
+  color: var(--bioNetWorksText);
+}
+
+.networkItem a:hover {
+  text-decoration: underline var(--text-color);
 }
 
 .location::before {

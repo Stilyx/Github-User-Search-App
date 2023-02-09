@@ -17,6 +17,7 @@ const getUsers = async user => {
     return;
   }
   sendUsers(response);
+  console.log(response);
 };
 
 // Send Users Infos in to Content
@@ -31,6 +32,7 @@ const sendUsers = response => {
   document.querySelector('.followersNumber').textContent = response.followers;
   document.querySelector('.followingNumber').textContent = response.following;
   document.querySelector('.location').textContent = containsItem(response.location);
+  document.querySelector('.link').href = containsItem(response.html_url);
   document.querySelector('.link').textContent = containsItem(response.html_url);
   document.querySelector('.twitter').textContent = containsItem(response.twitter_username);
   document.querySelector('.company').textContent = containsItem(response.company);
