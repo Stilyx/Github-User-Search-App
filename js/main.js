@@ -13,11 +13,9 @@ const getUsers = async user => {
   const url = await fetch(`https://api.github.com/users/${user}`);
   const response = await url.json();
   if (response.message === 'Not Found') {
-    errorMessage();
-    return;
+    return errorMessage();
   }
   sendUsers(response);
-  console.log(response);
 };
 
 // Send Users Infos in to Content
